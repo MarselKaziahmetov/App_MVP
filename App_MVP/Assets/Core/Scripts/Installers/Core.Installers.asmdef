@@ -1,0 +1,20 @@
+{
+    "name": "Core.Installers",
+    "rootNamespace": "Core.Installers",
+    "references": [
+        "GUID:0d8beb7f090555447a6cf5ce9e54dbb4",
+        "GUID:581ccbcf7ba67d240a7c2659462bb81f",
+        "GUID:703c14c9235dd96408622cace2b113da",
+        "GUID:91747027debb6c84f8a30cf0d6b2992f",
+        "GUID:773b8c6d032c2844d95e78999aba268e"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

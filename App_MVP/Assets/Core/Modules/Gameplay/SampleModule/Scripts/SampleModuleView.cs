@@ -26,18 +26,24 @@ namespace Core.Modules.Gameplay.SampleModule
         {
             _hideButton.onClick.RemoveAllListeners();
         }
+
+        private void Start()
+        {
+            InitHidedPopUp();
+            StartCoroutine(ShowWithDelay());
+            Debug.Log(Screen.height);
+        }
         #endregion
 
 
         #region Public methods
         internal void HideView()
         {
-            Hide_ElementScaling_ViewFading(_testWindow.gameObject);
-            StartCoroutine(ShowWithDelay());
+            Hide_DropOutFadeOut();
         }
         internal void ShowView()
         {
-            Show_ElementScaling_ViewFading(_testWindow.gameObject);
+            Show_DropOutFadeOut();
         }
         #endregion
 

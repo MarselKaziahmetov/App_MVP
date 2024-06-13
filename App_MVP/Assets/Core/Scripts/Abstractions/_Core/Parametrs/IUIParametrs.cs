@@ -4,5 +4,6 @@ namespace Core.Abstractions.Parametrs
     {
         float FadeDuration { get; }
         float ScalingDuration { get; }
+        float DropSpeed { get; }
     }
 }

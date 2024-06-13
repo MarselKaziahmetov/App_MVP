@@ -7,8 +7,10 @@ namespace Core.Modules.Core.Parametrs
     {
         [SerializeField] private float _fadeDuration;
         [SerializeField] private float _scalingDuration;
+        [SerializeField] private float _dropSpeed;
 
         public float FadeDuration => _fadeDuration;
         public float ScalingDuration => _scalingDuration;
+        public float DropSpeed => _dropSpeed;
     }
 }

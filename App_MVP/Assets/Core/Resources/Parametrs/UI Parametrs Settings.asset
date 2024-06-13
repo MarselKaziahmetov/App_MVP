@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _fadeDuration: 0.4
   _scalingDuration: 0.6
+  _dropSpeed: 0.4

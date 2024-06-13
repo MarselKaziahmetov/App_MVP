@@ -14,6 +14,7 @@ namespace Core.Abstractions.MVP
 
         private float _fadeDuration;
         private float _scalingDuration;
+        private float _dropSpeed;
 
         public event Action Hided;
         public event Action Showed;
@@ -26,6 +27,7 @@ namespace Core.Abstractions.MVP
         {
             _fadeDuration = UIParametrs.FadeDuration;
             _scalingDuration = UIParametrs.ScalingDuration;
+            _dropSpeed = UIParametrs.DropSpeed;
         }
 
 		protected virtual void Awake()
@@ -91,6 +93,22 @@ namespace Core.Abstractions.MVP
         public void Hide_ElementScaling_ViewFading(GameObject element)
         {
             StartCoroutine(HideElementAnimation(element));
+        }
+        public void Show_DropOutFadeOut()
+        {
+            _canvasGroup.transform.position = new Vector3(_canvasGroup.transform.position.x, _canvasGroup.transform.position.y + Screen.height, _canvasGroup.transform.position.z);
+            
+            _canvasGroup.DOFade(1f, _fadeDuration).SetEase(Ease.InSine);
+            _canvasGroup.transform.DOMoveY(Screen.height/2, _dropSpeed).SetEase(Ease.OutSine);
+
+            AfterShow(_fadeDuration);
+        }
+        public void Hide_DropOutFadeOut()
+        {
+            _canvasGroup.DOFade(0f, _fadeDuration).SetEase(Ease.OutSine);
+            _canvasGroup.transform.DOMoveY(-Screen.height, _dropSpeed).SetEase(Ease.InSine);
+
+            AfterHide(_fadeDuration);
         }
 
 

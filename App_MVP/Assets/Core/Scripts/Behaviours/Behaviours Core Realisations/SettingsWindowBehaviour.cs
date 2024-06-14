@@ -1,15 +1,14 @@
 using Core.Abstractions.MainWindow;
 using Core.Abstractions.SettingsWindow;
 
-
 namespace Core.Behaviours
 {
-    public class SettingsShowHideBehaviour : IBehaviour
+    public class SettingsWindowBehaviour : IBehaviour
     {
         private readonly IMainWindowModule _mainWindow;
         private readonly ISettingsWindowModule _settingsWindow;
 
-        public SettingsShowHideBehaviour(IMainWindowModule mainWindow, ISettingsWindowModule settingsWindow)
+        public SettingsWindowBehaviour(IMainWindowModule mainWindow, ISettingsWindowModule settingsWindow)
         {
             _mainWindow = mainWindow;
             _settingsWindow = settingsWindow;

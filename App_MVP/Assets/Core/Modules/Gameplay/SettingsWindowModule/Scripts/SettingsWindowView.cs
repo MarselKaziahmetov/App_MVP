@@ -47,6 +47,14 @@ namespace Core.Modules.Gameplay.SettingsWindow
         {
             Show_DropOutFadeOut();
         }
+        internal void InitMusicToggle(bool value)
+        {
+            _musicToggle.isOn = value;
+        }
+        internal void InitSoundToggle(bool value)
+        {
+            _soundToggle.isOn = value;
+        }
         #endregion
 
 

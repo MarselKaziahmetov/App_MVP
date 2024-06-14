@@ -8,6 +8,8 @@ namespace Core.Abstractions.SettingsWindow
 
         event Action HideRequested;
         event Action ShowRequested;
+        event Action<bool> MusicInitRequested;
+        event Action<bool> SoundInitRequested;
 
         void ShowSettings();
         void HideSettings();

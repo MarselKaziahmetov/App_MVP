@@ -27,7 +27,7 @@ namespace Core.Installers
 
         protected virtual void BindSampleModel()
         {
-            Container.BindInterfacesAndSelfTo<SampleModuleModel>().AsSingle();
+            Container.BindInterfacesAndSelfTo<StartWindowModuleModel>().AsSingle();
         }
 
         protected virtual void BindUIParametrs()

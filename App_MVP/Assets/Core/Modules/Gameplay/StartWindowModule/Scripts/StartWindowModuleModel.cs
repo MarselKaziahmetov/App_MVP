@@ -3,7 +3,7 @@ using System;
 
 namespace Core.Modules.Gameplay.SampleModule
 {
-    public class SampleModuleModel : ISampleModule
+    public class StartWindowModuleModel : IStartWindowModule
     {
         private bool _isHided;
 

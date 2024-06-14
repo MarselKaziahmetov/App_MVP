@@ -6,10 +6,9 @@ using System;
 
 namespace Core.Modules.Gameplay.SampleModule
 {   
-    public class SampleModuleView : UIPopUp
+    public class StartWindowModuleView : UIPopUp
     {
         #region Variables
-        [SerializeField] private CanvasGroup _testWindow;
         [SerializeField] private Button _hideButton;
         [SerializeField] private float _delay;
 
@@ -31,7 +30,6 @@ namespace Core.Modules.Gameplay.SampleModule
         {
             InitHidedPopUp();
             StartCoroutine(ShowWithDelay());
-            Debug.Log(Screen.height);
         }
         #endregion
 

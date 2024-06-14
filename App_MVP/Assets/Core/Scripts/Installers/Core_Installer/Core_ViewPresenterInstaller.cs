@@ -15,8 +15,8 @@ namespace Core.Installers
 
         protected virtual void BindSampleViewPresenter()
         {
-            Container.BindInterfacesAndSelfTo<SampleModuleView>().FromComponentInHierarchy().AsSingle();
-            Container.BindInterfacesAndSelfTo<SampleModulePresenter>().AsSingle().NonLazy();
+            Container.BindInterfacesAndSelfTo<StartWindowModuleView>().FromComponentInHierarchy().AsSingle();
+            Container.BindInterfacesAndSelfTo<StartWindowModulePresenter>().AsSingle().NonLazy();
         }
     }
 }

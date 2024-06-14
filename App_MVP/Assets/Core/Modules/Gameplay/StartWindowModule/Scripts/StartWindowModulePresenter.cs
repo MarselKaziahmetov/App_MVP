@@ -2,7 +2,7 @@ using Core.Abstractions.MVP;
 
 namespace Core.Modules.Gameplay.SampleModule
 {
-    public class SampleModulePresenter : PresenterBase<SampleModuleModel, SampleModuleView>
+    public class StartWindowModulePresenter : PresenterBase<StartWindowModuleModel, StartWindowModuleView>
     {
         protected override void Present()
         {

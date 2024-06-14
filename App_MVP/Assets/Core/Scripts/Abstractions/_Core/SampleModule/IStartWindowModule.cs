@@ -2,7 +2,7 @@ using System;
 
 namespace Core.Abstractions.Sample
 {
-    public interface ISampleModule
+    public interface IStartWindowModule
     {
         bool IsHided { get; }
 

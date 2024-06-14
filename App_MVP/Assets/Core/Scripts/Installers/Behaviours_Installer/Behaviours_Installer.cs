@@ -21,6 +21,7 @@ namespace Core.Installers
 		{
             Container.BindInterfacesTo<ViewInitializerBehaviour>().AsSingle();
             Container.BindInterfacesTo<MainSceneLoaderBehaviour>().AsSingle();
+            Container.BindInterfacesTo<SettingsShowHideBehaviour>().AsSingle();
         }
 
 		public virtual void BindExtendedBahaviours()

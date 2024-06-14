@@ -1,26 +1,27 @@
-using UnityEngine;
+using Core.Abstractions.SettingsWindow;
+using System;
 
-namespace Core.Modules.Gameplay
+namespace Core.Modules.Gameplay.SettingsWindow
 {
-    public class SettingsWindowModel : MonoBehaviour
+    public class SettingsWindowModel : ISettingsWindowModule
     {
-    #region Variables
+        private bool _isHided;
 
-    #endregion
+        public bool IsHided => _isHided;
 
-
-    #region Unity lifecycle
-
-    #endregion
+        public event Action HideRequested;
+        public event Action ShowRequested;
 
 
-    #region Public methods
-
-    #endregion
-
-
-    #region Private methods
-
-    #endregion
+        public void HideSettings()
+        {
+            _isHided = true;
+            HideRequested?.Invoke();
+        }
+        public void ShowSettings()
+        {
+            _isHided = false;
+            ShowRequested?.Invoke();
+        }
     }
 }

@@ -8,6 +8,8 @@ namespace Core.Abstractions.MainWindow
 
         event Action HideRequested;
         event Action ShowRequested;
+
         event Action MainSceneLoadRequested;
+        event Action SettingsWindowRequested;
     }
 }

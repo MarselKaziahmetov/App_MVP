@@ -96,7 +96,7 @@ namespace Core.Abstractions.MVP
         }
         public void Show_DropOutFadeOut()
         {
-            _canvasGroup.transform.position = new Vector3(_canvasGroup.transform.position.x, _canvasGroup.transform.position.y + Screen.height, _canvasGroup.transform.position.z);
+            _canvasGroup.transform.position = new Vector3(_canvasGroup.transform.position.x, Screen.height, _canvasGroup.transform.position.z);
             
             _canvasGroup.DOFade(1f, _fadeDuration).SetEase(Ease.InSine);
             _canvasGroup.transform.DOMoveY(Screen.height/2, _dropSpeed).SetEase(Ease.OutSine);

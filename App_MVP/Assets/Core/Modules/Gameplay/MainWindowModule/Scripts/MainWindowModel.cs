@@ -11,7 +11,9 @@ namespace Core.Modules.Gameplay.MainWindow
 
         public event Action HideRequested;
         public event Action ShowRequested;
+
         public event Action MainSceneLoadRequested;
+        public event Action SettingsWindowRequested;
 
         internal void HideView()
         {
@@ -27,6 +29,10 @@ namespace Core.Modules.Gameplay.MainWindow
         {
             HideView();
             MainSceneLoadRequested?.Invoke();
+        }
+        internal void ShowSettings()
+        {
+            SettingsWindowRequested?.Invoke();
         }
     }
 }

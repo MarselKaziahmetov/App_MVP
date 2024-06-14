@@ -1,26 +1,22 @@
+using Core.Modules.Gameplay.SettingsWindow;
 using UnityEngine;
+using Zenject;
 
-namespace Core.Modules.Gameplay
+namespace Core.Modules.SettingsWindow
 {
-    public class SettingsWindowInstaller : MonoBehaviour
+
+    [CreateAssetMenu(menuName = "Core/Gameplay Installers/Settings Window Installer", order = 1)]
+    public class SettingsWindowInstaller : ScriptableObjectInstaller
     {
-    #region Variables
+        public override void InstallBindings()
+        {
+            BindMainWindowViewPresenter();
+        }
 
-    #endregion
-
-
-    #region Unity lifecycle
-
-    #endregion
-
-
-    #region Public methods
-
-    #endregion
-
-
-    #region Private methods
-
-    #endregion
+        protected virtual void BindMainWindowViewPresenter()
+        {
+            Container.BindInterfacesAndSelfTo<SettingsWindowView>().FromComponentInHierarchy().AsSingle();
+            Container.BindInterfacesAndSelfTo<SettingsWindowPresenter>().AsSingle().NonLazy();
+        }
     }
 }

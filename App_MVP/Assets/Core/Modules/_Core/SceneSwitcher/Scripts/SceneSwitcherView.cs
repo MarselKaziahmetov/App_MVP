@@ -43,7 +43,6 @@ namespace Core.Modules.Core.SceneSwitcher
         }
         internal void FadeOutView()
         {
-            Debug.Log("popa");
             StartCoroutine(DelayedFadeOut(_fadeAnimDuration));
         }
         #endregion

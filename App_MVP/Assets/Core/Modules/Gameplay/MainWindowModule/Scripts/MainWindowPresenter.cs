@@ -10,7 +10,7 @@ namespace Core.Modules.Gameplay.MainWindow
             Model.HideRequested += Model_HideRequested;
 
             View.RestartButtonPressed += View_RestartButtonPressed;
-            View.SettingsButtonPressed += View_ShowRequested;
+            View.SettingsButtonPressed += View_SettingsButtonPressed;
         }
         public override void Dispose()
         {
@@ -18,7 +18,7 @@ namespace Core.Modules.Gameplay.MainWindow
             Model.HideRequested -= Model_HideRequested;
 
             View.RestartButtonPressed -= View_RestartButtonPressed;
-            View.SettingsButtonPressed -= View_ShowRequested;
+            View.SettingsButtonPressed -= View_SettingsButtonPressed;
         }
 
         private void Model_ShowRequested()
@@ -30,15 +30,13 @@ namespace Core.Modules.Gameplay.MainWindow
             View.HideView();
         }
 
-        private void View_ShowRequested()
+        private void View_SettingsButtonPressed()
         {
-            Model.ShowView();
+            Model.ShowSettings();
         }
         private void View_RestartButtonPressed()
         {
             Model.LoadMainScene();
         }
-
-
     }
 }

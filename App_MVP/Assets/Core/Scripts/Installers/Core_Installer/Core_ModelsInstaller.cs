@@ -5,6 +5,7 @@ using Core.Modules.Gameplay.MainWindow;
 using Core.Modules.Core.TimeScaler;
 using UnityEngine;
 using Zenject;
+using Core.Modules.Gameplay.SettingsWindow;
 
 namespace Core.Installers
 {
@@ -19,6 +20,7 @@ namespace Core.Installers
 		{
             BindStartWindowModel();
             BindMainWindowModel();
+            BindSettingsWindowModel();
 
             BindUIParametrs();
             BindSceneParametrs();
@@ -34,6 +36,11 @@ namespace Core.Installers
         {
             Container.BindInterfacesAndSelfTo<MainWindowModel>().AsSingle();
         }
+        protected virtual void BindSettingsWindowModel()
+        {
+            Container.BindInterfacesAndSelfTo<SettingsWindowModel>().AsSingle();
+        }
+
 
         protected virtual void BindUIParametrs()
         {

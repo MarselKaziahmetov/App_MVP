@@ -348,6 +348,10 @@ PrefabInstance:
       propertyPath: _scriptableObjectInstallers.Array.data[0]
       value: 
       objectReference: {fileID: 11400000, guid: 134e8ff829e130441b849e2713d3f0db, type: 2}
+    - target: {fileID: 8554378482017174086, guid: 91487261e2e9afb479b6256218ffd31b, type: 3}
+      propertyPath: _delay
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 2590455782540306298, guid: 91487261e2e9afb479b6256218ffd31b, type: 3}

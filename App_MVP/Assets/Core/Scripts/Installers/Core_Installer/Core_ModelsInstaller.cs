@@ -1,7 +1,7 @@
 using Core.Modules.Core;
 using Core.Modules.Core.Parametrs;
-using Core.Modules.Gameplay.SampleModule;
-using Core.Modules.Core.SceneSwitcher;
+using Core.Modules.Gameplay.StartModule;
+using Core.Modules.Gameplay.MainWindow;
 using Core.Modules.Core.TimeScaler;
 using UnityEngine;
 using Zenject;
@@ -17,7 +17,8 @@ namespace Core.Installers
 
         public override void InstallBindings()
 		{
-            BindSampleModel();
+            BindStartWindowModel();
+            BindMainWindowModel();
 
             BindUIParametrs();
             BindSceneParametrs();
@@ -25,9 +26,13 @@ namespace Core.Installers
             BindTimeScaler();
         }
 
-        protected virtual void BindSampleModel()
+        protected virtual void BindStartWindowModel()
         {
             Container.BindInterfacesAndSelfTo<StartWindowModuleModel>().AsSingle();
+        }
+        protected virtual void BindMainWindowModel()
+        {
+            Container.BindInterfacesAndSelfTo<MainWindowModel>().AsSingle();
         }
 
         protected virtual void BindUIParametrs()

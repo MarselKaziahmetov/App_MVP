@@ -10,5 +10,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b25f6de562b14f34185d5fc5242d9535, type: 3}
-  m_Name: Core View Presenter Installer
+  m_Name: Start Core View Presenter Installer
   m_EditorClassIdentifier: 

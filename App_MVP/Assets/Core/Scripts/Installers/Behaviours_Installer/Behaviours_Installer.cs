@@ -20,7 +20,7 @@ namespace Core.Installers
 		public virtual void BindDefaultBehaviours()
 		{
             Container.BindInterfacesTo<ViewInitializerBehaviour>().AsSingle();
-            Container.BindInterfacesTo<OnNextButtonClickBehaviour>().AsSingle();
+            Container.BindInterfacesTo<MainSceneLoaderBehaviour>().AsSingle();
         }
 
 		public virtual void BindExtendedBahaviours()

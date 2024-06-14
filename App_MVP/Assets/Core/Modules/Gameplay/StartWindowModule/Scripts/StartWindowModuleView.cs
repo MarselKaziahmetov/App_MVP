@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 
-namespace Core.Modules.Gameplay.SampleModule
+namespace Core.Modules.Gameplay.StartModule
 {   
     public class StartWindowModuleView : UIPopUp
     {

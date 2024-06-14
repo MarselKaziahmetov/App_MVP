@@ -1,6 +1,6 @@
 using Core.Abstractions.MVP;
 
-namespace Core.Modules.Gameplay.SampleModule
+namespace Core.Modules.Gameplay.StartModule
 {
     public class StartWindowModulePresenter : PresenterBase<StartWindowModuleModel, StartWindowModuleView>
     {

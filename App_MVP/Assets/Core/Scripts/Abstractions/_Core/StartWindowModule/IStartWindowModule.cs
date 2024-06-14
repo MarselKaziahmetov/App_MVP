@@ -8,5 +8,6 @@ namespace Core.Abstractions.Sample
 
         event Action HideRequested;
         event Action ShowRequested;
+        event Action MainSceneLoadRequested;
     }
 }

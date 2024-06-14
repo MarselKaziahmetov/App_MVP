@@ -9,21 +9,21 @@ namespace Core.Modules.Gameplay.SampleModule
     public class StartWindowModuleView : UIPopUp
     {
         #region Variables
-        [SerializeField] private Button _hideButton;
+        [SerializeField] private Button _nextButton;
         [SerializeField] private float _delay;
 
-        public event Action HideViewRequested;
+        public event Action NextButtonPressed;
         public event Action ShowViewRequested;
         #endregion
 
         #region Unity lifecycle
         private void OnEnable()
         {
-            _hideButton.onClick.AddListener(OnHideButtonClick);
+            _nextButton.onClick.AddListener(OnNextButtonClick);
         }
         private void OnDisable()
         {
-            _hideButton.onClick.RemoveAllListeners();
+            _nextButton.onClick.RemoveAllListeners();
         }
 
         private void Start()
@@ -47,9 +47,9 @@ namespace Core.Modules.Gameplay.SampleModule
 
 
         #region Private methods
-        private void OnHideButtonClick()
+        private void OnNextButtonClick()
         {
-            HideViewRequested?.Invoke();
+            NextButtonPressed?.Invoke();
         }
         private void RequestShowView()
         {

@@ -11,6 +11,7 @@ namespace Core.Modules.Gameplay.SampleModule
 
         public event Action HideRequested;
         public event Action ShowRequested;
+        public event Action MainSceneLoadRequested;
 
         internal void HideView()
         {
@@ -21,6 +22,11 @@ namespace Core.Modules.Gameplay.SampleModule
         {
             _isHided = false;
             ShowRequested?.Invoke();
+        }
+        internal void LoadMainScene()
+        {
+            HideView();
+            MainSceneLoadRequested?.Invoke();
         }
     }
 }

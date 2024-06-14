@@ -7,7 +7,7 @@ namespace Core.Modules.Core.Parametrs
     public class SceneParametrsSettings : ScriptableObject
     {
         [SerializeField] private SceneAsset _mainScene;
-        [SerializeField] private SceneAsset _switchScene;
+        [SerializeField] private SceneAsset _startScene;
 
         public string MainScene
         {
@@ -15,9 +15,9 @@ namespace Core.Modules.Core.Parametrs
             private set { }
         }
 
-        public string SwitchScene
+        public string StartScene
         {
-            get { return _switchScene.name; }
+            get { return _startScene.name; }
             private set { }
         }
     }

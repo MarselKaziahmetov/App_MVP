@@ -9,7 +9,7 @@ namespace Core.Modules.Gameplay.SampleModule
             Model.ShowRequested += Model_ShowRequested;
             Model.HideRequested += Model_HideRequested;
 
-            View.HideViewRequested += View_HideRequested;
+            View.NextButtonPressed += View_NextButtonPressed;
             View.ShowViewRequested += View_ShowRequested;
         }
         public override void Dispose()
@@ -17,7 +17,7 @@ namespace Core.Modules.Gameplay.SampleModule
             Model.ShowRequested -= Model_ShowRequested;
             Model.HideRequested -= Model_HideRequested;
 
-            View.HideViewRequested -= View_HideRequested;
+            View.NextButtonPressed -= View_NextButtonPressed;
             View.ShowViewRequested -= View_ShowRequested;
         }
 
@@ -34,9 +34,9 @@ namespace Core.Modules.Gameplay.SampleModule
         {
             Model.ShowView();
         }
-        private void View_HideRequested()
+        private void View_NextButtonPressed()
         {
-            Model.HideView();
+            Model.LoadMainScene();
         }
     }
 }

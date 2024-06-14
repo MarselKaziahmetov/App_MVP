@@ -1,5 +1,4 @@
 using Core.Modules.Gameplay.SampleModule;
-using Core.Modules.Core.SceneSwitcher;
 using UnityEngine;
 using Zenject;
 
@@ -10,10 +9,15 @@ namespace Core.Installers
     {
         public override void InstallBindings()
         {
-            BindSampleViewPresenter();
+            BindStartWindowViewPresenter();
         }
 
-        protected virtual void BindSampleViewPresenter()
+        protected virtual void BindStartWindowViewPresenter()
+        {
+            Container.BindInterfacesAndSelfTo<StartWindowModuleView>().FromComponentInHierarchy().AsSingle();
+            Container.BindInterfacesAndSelfTo<StartWindowModulePresenter>().AsSingle().NonLazy();
+        }
+        protected virtual void BindMainWindowViewPresenter()
         {
             Container.BindInterfacesAndSelfTo<StartWindowModuleView>().FromComponentInHierarchy().AsSingle();
             Container.BindInterfacesAndSelfTo<StartWindowModulePresenter>().AsSingle().NonLazy();

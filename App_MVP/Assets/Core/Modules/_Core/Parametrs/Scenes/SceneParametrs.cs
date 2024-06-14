@@ -7,12 +7,12 @@ namespace Core.Modules.Core
     public class SceneParametrs : ISceneParametrs
     {
         public string MainScene { get; }
-        public string SwitchScene { get; }
+        public string StartScene { get; }
 
         public SceneParametrs(SceneParametrsSettings sceneParametrsSettings)
         {
             MainScene = sceneParametrsSettings.MainScene;
-            SwitchScene = sceneParametrsSettings.SwitchScene;
+            StartScene = sceneParametrsSettings.StartScene;
         }
     }
 }

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45ca1b60ac21af041afe0e0f9cc567f6, type: 3}
   m_Name: Scene Settings
   m_EditorClassIdentifier: 
-  _mainScene: {fileID: 102900000, guid: d9dfc8f655ea91a48991016477adb8ef, type: 3}
-  _startScene: {fileID: 102900000, guid: 0a34d7fefbd53ff49841784ffd22c203, type: 3}
+  _mainScene: Main
+  _startScene: Start

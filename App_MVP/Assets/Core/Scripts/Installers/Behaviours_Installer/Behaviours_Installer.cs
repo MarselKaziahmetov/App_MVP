@@ -22,6 +22,8 @@ namespace Core.Installers
             Container.BindInterfacesTo<ViewInitializerBehaviour>().AsSingle();
             Container.BindInterfacesTo<MainSceneLoaderBehaviour>().AsSingle();
             Container.BindInterfacesTo<SettingsWindowBehaviour>().AsSingle();
+            Container.BindInterfacesTo<ClickSoundBehaviour>().AsSingle();
+            Container.BindInterfacesTo<VolumeTogglesBehaviour>().AsSingle();
         }
 
 		public virtual void BindExtendedBahaviours()

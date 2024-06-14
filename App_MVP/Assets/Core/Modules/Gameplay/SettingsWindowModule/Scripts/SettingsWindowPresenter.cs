@@ -49,7 +49,7 @@ namespace Core.Modules.Gameplay.SettingsWindow
 
         private void View_CloseButtonPressed()
         {
-            Model.HideSettings();
+            Model.CloseSettings();
         }
         private void View_SoundTogglePressed(bool value)
         {
